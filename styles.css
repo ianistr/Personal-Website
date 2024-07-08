@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: 'Arial, sans-serif';
+    background-color: #000000;
+    color: #d6ba99;
+    text-align: center;
+    
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: transparent;
+}
+
+.navbar-wrapper {
+    display: inline-block;
+    position: fixed;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #2b2b2b6c;
+    padding: 0.5rem 0.5rem;
+    border-radius: 3px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d6ba99;
+    margin-right: 2rem;
+    
+    
+}
+
+.menu-icon{
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    font-size: 1.5rem;
+    color: #d6ba99;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.talk-button {
+    background-color: #d6ba99;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 4rem;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+}
+
+.talk-button:hover {
+    background-color: #b89874;
+}
+
+.hero {
+    text-align: center;
+    
+}
+
+.hero-image {
+    margin-top: 4rem;
+    width: 25%;
+    height: auto;
+    border-radius: 20%;
+    
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    margin-top: 2rem;
+    
+}
+
+.hero-text p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.availability-button, .services-button {
+    background-color: transparent;
+    border: 1px solid #d6ba99;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.availability-button:hover, .services-button:hover {
+    background-color: #d6ba99;
+    color: #000;
+}
+@media screen and (max-width:700px) {
+    .nav-links a{
+        display:none;
+    }
+    .menu-icon{
+        display: flex;
+        font-size: 3rem;
+        margin-bottom: 3px;
+    }
+    .hero-image{
+        margin-top: 10rem;
+        width: 50%;
+        height: auto;
+        border-radius: 20%;
+    }
+    .hero-text h1 {
+        font-size: 4rem;
+        margin-top: 2rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-top: 5rem;
+        
+    }
+}
+
+
+
+
