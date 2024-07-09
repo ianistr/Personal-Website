@@ -1,7 +1,26 @@
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('Fonts/WEB/fonts/Gambetta-LightItalic.woff') format('woff'),
+         url('Fonts/WEB/fonts/Gambetta-LightItalic.woff2') format('woff2');
+         
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
 body {
     margin: 0;
-    font-family: 'Arial, sans-serif';
-    background-color: #000000;
+    font-family: MyCustomFont,sans-serif;
+    /*background-color: rgb(9,10,10);*/
+    background-color: #000;
     color: #d6ba99;
     text-align: center;
     
@@ -30,6 +49,7 @@ header {
 .logo {
     font-size: 2rem;
     font-weight: bold;
+    font-family: Arial, sans-serif;
     color: #d6ba99;
     margin-right: 2rem;
     
@@ -46,6 +66,7 @@ header {
     color: #d6ba99;
     text-decoration: none;
     margin: 0 1rem;
+    font-family: Arial, sans-serif;
 }
 
 .nav-links a:hover {
@@ -68,8 +89,13 @@ header {
     background-color: #b89874;
 }
 
+
 .hero {
+    margin:0 12rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -84,14 +110,19 @@ header {
 .hero-text h1 {
     font-size: 4.5rem;
     margin-top: 2rem;
+    font-family: Arial, serif;
+    
     
 }
 
 .hero-text p {
+    text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    
+    
 }
 
 .buttons {
@@ -100,17 +131,47 @@ header {
     gap: 1rem;
 }
 
-.availability-button, .services-button {
-    background-color: transparent;
-    border: 1px solid #d6ba99;
-    padding: 0.5rem 1rem;
+.availability-button {
+    position: absolute;
+    color: #d6ba99;
+    
+    font-size:1.2rem;
+    top: 40vh;
+    left: 3vw;
+    background-color: #2b2b2b6c;
+    border: 0.5px solid #ffffff80;
+    border-radius: 3px;
+    padding: 0.2rem 0.5rem;
     cursor: pointer;
+
 }
 
-.availability-button:hover, .services-button:hover {
+.availability-button:hover:hover {
     background-color: #d6ba99;
     color: #000;
 }
+
+.service-container{
+    display: flex;
+    justify-content: center;
+    margin:2rem 3rem;
+    gap:6rem
+}
+
+.service{
+    border:1px solid grey;
+    border-radius: 3px;
+    background-color: #0e0e0e;
+    width: 30vw;
+    padding: 1rem 1rem;
+    text-align: left;
+    font-weight: bold;
+    
+}
+
+
+
+
 @media screen and (max-width:700px) {
     .nav-links a{
         display:none;
@@ -133,6 +194,9 @@ header {
         margin-left: 1rem;
         margin-top: 5rem;
         
+    }
+    .service-container{
+        flex-direction: column;
     }
 }
 
