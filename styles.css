@@ -23,20 +23,21 @@ body {
     background-color: #000;
     color: #d6ba99;
     text-align: center;
-    background: linear-gradient(135deg, #000000 40%, #282525);
+    /*background: linear-gradient(135deg, #000000 40%, #282525);*/
     
 }
 
 header {
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     background-color: transparent;
 }
 
 .navbar-wrapper {
     display: inline-block;
     position: fixed;
+    z-index: 2;
 }
 
 .navbar {
@@ -110,7 +111,7 @@ header {
 
 .hero-text h1 {
     font-size: 4.5rem;
-    margin-top: 2rem;
+    margin-top: 0;
     font-family: Arial, serif;
     
     
@@ -133,12 +134,12 @@ header {
 }
 
 .availability-button {
-    position: absolute;
+    position: fixed;
     color: #d6ba99;
     
     font-size:1.2rem;
-    top: 40vh;
-    left: 3vw;
+    top: 90vh;
+    left: 2vw;
     background-color: #2b2b2b6c;
     border: 0.5px solid #ffffff80;
     border-radius: 3px;
@@ -153,7 +154,9 @@ header {
 }
 
 
-
+section{
+    background: linear-gradient(135deg, #000000 40%, #282525);
+}
 .service-container{
     display: flex;
     justify-content: center;
@@ -210,10 +213,104 @@ header {
     background-color: #1b1b1b;
 }
 
+.timeline {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #4a4a4a; /* Grey line */
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item .content {
+    background: #0e0e0e; /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item.right .content {
+    transform: translateX(20px); /* Adjust as needed */
+}
+
+.timeline-item.left .content {
+    transform: translateX(-20px); /* Adjust as needed */
+}
+
+
+
+.timeline-item h3 {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: #d6ba99;
+}
+
+.timeline-item p, .timeline-item ul {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.timeline-item ul {
+    padding-left: 20px;
+}
+
+.timeline-item .duration {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+    text-align: right;
+}
+
+.circle{
+    position: relative;
+    left: 50%; /* Adjust the position of the circles */
+    transform: translateX(-50%);
+    width: 30px; /* Diameter of the circle */
+    height: 30px;
+    border: 2px solid #333; /* Border color of the circle */
+    border-radius: 50%; /* Round shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a7937c; /* Text color inside the circle */
+    font-weight: bold;
+    font-size: 16px; /* Font size of the number */
+    background-color: #2b2b2b;
+        
+    }
 
 
 
 @media screen and (max-width:700px) {
+    body{
+        overflow-x: hidden;
+    }
     .nav-links a{
         display:none;
     }
