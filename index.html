@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ianistr-Web Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon"  href="icon.ico">
 </head>
 <body>
     <section id="section1">
@@ -13,25 +14,47 @@
             <div class="navbar">
                 <div class="logo">ianistr.</div>
                 <div class="nav-links">
-                    <a href="#">Services</a>
-                    <a href="#">Work</a>
-                    <a href="#">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="work.html">Work</a>
+                    <a href="about.html">About</a>
                     
                 
                 <button class="talk-button">Let's Talk</button>
             </div>
-            <div class="menu-icon">&#9776;</div>
-        </div>
-            
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </div>  
         </nav>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+
+
+
+
         <div class="buttons">
-            <button class="availability-button">Available</button>
+            <button class="availability-button" id="available-button" onclick="toggleAvailabilityMenu()">Available</button> 
+        </div>
+
+        <div id="availability-menu">
+            
+            <ul id="monthsList">
+                <!-- List items will be appended here by JavaScript -->
+            </ul>
             
         </div>
+
+
     </header>
     <se>
-        <img src="eu5.jpg" alt="Profile Picture" class="hero-image">
+        <img src="eu5.jpg" class="hero-image">
         <div class="hero">
+            
             <div class="hero-text">
                 <h1>Proffesional Web Developer</h1>
                 <p>Premium Web Design, Development, and Maintenance services that help your business stand out.</p>
@@ -175,7 +198,7 @@
                     <h3>DEVELOPMENT</h3>
                     <p>In this step, we breathe life into your new high-end design. You will receive a custom-built website using a modular web design system and CMS integration. Animations will add the necessary flair to your site and set you apart from the boring competition.</p>
                     <ul>
-                        <li>Custom framer website</li>
+                        <li>Custom back-end</li>
                         <li>Modular web design systems</li>
                         <li>CMS integration</li>
                     </ul>
@@ -189,11 +212,11 @@
                 <div class="content">
                     
                     <h3>WEBSITE ONBOARDING</h3>
-                    <p>n a personal Framer workshop, I will show you how to make changes to your new website quickly and easily. Additionally, you will receive personalized Framer video tutorials that you can access at any time. Edit your Framer website without a complicated backend or the need for an additional programmer. It's as simple as that.</p>
+                    <p>In a personal video workshop, I will show you how to make changes to your new website quickly and easily. Additionally, you will receive a personalized domain that you can access at any time. Edit your personal website with the assistance of a Proffesional programmer. It's as simple as that.</p>
                     <ul>
-                        <li>Personal workshop</li>
-                        <li>Personalized video tutorials</li>
-                        <li>Edit text and images directly on your website</li>
+                        <li>Personal feedback</li>
+                        <li>Personalized domain</li>
+                        <li>Edit text and images on your website</li>
                     </ul>
                     <span class="duration">2 HOURS</span>
                 </div>
@@ -233,9 +256,77 @@
             <h2><span id="firstname">Ianis</span> Tararache</h2>
             <img src="eu5.jpg" alt="Profile Picture" class="hero-image">
             <h1>A website that leaves a lasting impression</h1>
+            <p>Hi, I'm ianistr. - a freelancer specializing in premium web design, development, and maintenance services. I'm passionate about creating unique and effective solutions for my clients, and I bring a personal touch to every project. Let's work together to bring your vision to life!</p>
 
         </div>
     </section>
+    <footer>
+        <div class="marquee">
+            <div class="marquee-inner">
+              <p>LET'S TALK ++ </p>
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>
+              <p>LET'S TALK ++ </p>
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>
+              <p>LET'S TALK ++ </p>
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>
+              <p>LET'S TALK ++ </p>
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>  
+              <p>LET'S TALK ++ </p>        
+            </div>
+        </div>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h2>PROJECT IN MIND?</h2>
+                <h1>Let's make your website shine</h1>
+                <p>Premium web design, development, and maintenance services to help your business stand out.</p>
+            </div>
+            <!-- Quick Links Section -->
+            <div class="footer-section footer-links">
+                <h2>Quick Links</h2>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="work.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <!-- Social Media Section -->
+            <div class="footer-section social-icons">
+                <h2>Follow Me</h2>
+                <a href="https://www.instagram.com/ianisstr/" class="image-link" target="_blank">
+                    <img src="instagram.png" alt="Clickable Photo">
+                </a>
+                
+            </div>
+            <!-- Contact Section -->
+            <div class="footer-section">
+                <h2>Contact Me</h2>
+                <p>Email: ianis_tararache@yahoo.com</p>
+                <p>Phone: +40726307501</p>
+                
+            </div>
+        </div>
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="copyright-year"></span> ianistr. All rights reserved.</p>
+            
+        </div>
+    </footer>
     
 
 

@@ -12,6 +12,16 @@ function changeClasses() {
     
 }
 
+const buttons = document.querySelectorAll('.talk-button');
+
+        // Add an event listener to each button
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Redirect to the specified URL
+                window.location.href = 'contact.html';
+            });
+        });
+
 
 
 function toggleClasses() {
@@ -60,6 +70,105 @@ window.addEventListener('load', toggleClassesPro);
 
 
 
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+}
+
+function toggleAvailabilityMenu(){
+    const menu=document.getElementById("availability-menu")
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+}
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var currentYear = new Date().getFullYear();
+    document.getElementById('copyright-year').textContent = currentYear;
+});
+
+
+
+
+function getNextThreeMonths() {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const availablePlaces = [0, 1, 1]; // Example available places for the next three months
+
+    const today = new Date();
+    let currentMonth = today.getMonth();
+    let monthList = [];
+
+    for (let i = 0; i < 3; i++) {
+        currentMonth = (today.getMonth() + i) % 12; // Ensure month index wraps around after December
+        let monthName = months[currentMonth];
+        monthList.push({ name: monthName, places: availablePlaces[i] });
+    }
+
+    return monthList;
+}
+
+// Function to display the next three months in the list
+function displayNextThreeMonths() {
+    const monthsList = getNextThreeMonths();
+    const monthsListElement = document.getElementById('monthsList');
+
+    monthsList.forEach(month => {
+        if(month.places==0){
+        const listItem = document.createElement('li');
+        listItem.textContent = `${month.name}: Busy`;
+        monthsListElement.appendChild(listItem);
+        }
+        else{
+            const listItem = document.createElement('li');
+        listItem.textContent = `${month.name}: ${month.places} spot`;
+        monthsListElement.appendChild(listItem);
+        }
+        
+    });
+}
+
+// Execute the function to display the months
+displayNextThreeMonths();
+
+
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Directly manipulate the element's style to trigger the animation
+            entry.target.style.transform = 'translateX(0)';
+            entry.target.style.transform = 'translateY(9rem)';
+            
+            // Stop observing the element after the animation is applied
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+// Select all elements to be observed
+document.querySelectorAll('.timeline-item').forEach(element => {
+    observer.observe(element);
+});
+
+
+const objects = document.querySelectorAll('.link-container');
+
+        // Add an event listener to each object
+        objects.forEach(object => {
+            object.addEventListener('click', () => {
+                // Redirect to the specified URL
+                window.location.href = 'services.html';
+            });
+        });
 
 
 

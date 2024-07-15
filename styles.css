@@ -9,8 +9,16 @@
 }
 
 
-
-
+@keyframes pop{
+    from{
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
@@ -42,11 +50,13 @@ header {
 }
 
 .navbar {
+    max-width: 99vw;
     display: flex;
     align-items: center;
     background-color: #2b2b2b6c;
     padding: 0.5rem 0.5rem;
     border-radius: 3px;
+    animation: pop 1.5s ease;
 }
 
 .logo {
@@ -62,7 +72,69 @@ header {
 .menu-icon{
     display: none;
     margin-left: 1rem;
+    cursor: pointer;
 }
+
+#menu{
+    display: none;
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    z-index: 6;
+    background-color: #211f1daf;
+    align-items: left;
+    text-align: center;
+    justify-content: center;
+}
+
+#menu ul{
+    list-style-type: none;
+    text-align: center;
+    
+    
+    
+    
+}
+#menu li{
+    display: flex; /* Display list items in a row */
+    margin: 0 10px; /* Adjust spacing between items */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#menu a{
+            position: relative;
+            text-decoration: none;
+           text-align: center;
+            transition: background-color 0.3s ease; 
+            font-size: 2rem;
+            margin-right: 1.8rem;
+            margin-bottom: 4rem;
+            cursor: pointer;
+            color: inherit;
+    
+}
+
+#menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: #333; /* Adjust the color of the underline */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: bottom left; /* Scale from left */
+    transition: transform 0.3s ease-out;
+}
+#menu a:hover::after {
+    transform: scaleX(1);
+}
+
+
+
 
 .nav-links a {
     font-size: 1.5rem;
@@ -75,6 +147,14 @@ header {
 .nav-links a:hover {
     color: #fff;
 }
+
+
+
+
+
+
+
+
 
 .talk-button {
     background-color: #d6ba99;
@@ -114,14 +194,19 @@ header {
     
 }
 
+
+
 .hero-text h1 {
     font-size: 4.5rem;
     margin-top: 0;
     font-family: MyCustomFont;
     margin-bottom: 5rem;
     text-shadow: 1px 1px 3px #3e3d3d;
+    animation: pop 1.5s ease;
     
 }
+
+
 
 .hero-text p {
     text-align: center;
@@ -152,7 +237,27 @@ header {
     padding: 0.2rem 0.5rem;
     cursor: pointer;
     z-index: 5;
+    animation: pop 1.5s ease;
 
+}
+
+#availability-menu{
+    position: fixed;
+    color: #d6ba99;
+    
+    font-size:1.2rem;
+    top: 38vh;
+    left: 2vw;
+    background-color: #1a1919;
+    border: 0.5px solid #ffffff80;
+    border-radius: 3px;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    z-index: 5;
+    display: none;
+    text-align: left;
+    max-width: 50vw;
+    font-size: 2rem;
 }
 
 .availability-button:hover:hover {
@@ -167,7 +272,7 @@ header {
     background: linear-gradient(to right, #000000 10%, #282525);}
 
 #section3{
-        background: linear-gradient(to right, #000000 10%, #282525);
+        background: linear-gradient(to bottom, #000000 70%, #282525);
     
    
 }
@@ -314,7 +419,8 @@ header {
     position: relative;
     width: 50%;
     box-sizing: border-box;
-    
+    transform: translateX(-100%); /* Start position off-screen to the left */
+            transition: transform 1s ease-in-out;
 }
 
 .timeline-item .content {
@@ -402,8 +508,95 @@ header {
         
     }
 #firstname{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.info{
+    
+    margin:0 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.info h1{
+    font-size: 3rem;
+}
+.info p{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info img{
+    margin-top: 0;
+}
+
+footer {
+    background-color: #282525;
+    
+    padding: 20px 0;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-section {
+    margin: 20px 0;
+}
+
+.footer-section p a{
+    color: inherit;
+    text-decoration: none;
+}
+.footer-links a {
+    
+    text-decoration: none;
+    margin: 0 10px;
+    color:  #d6ba99;;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.social-icons a {
+    
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+}
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.image-link img{
+    width: 5rem;
+    height: auto;
+}
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .footer-section {
+        flex: 1;
+        margin: 0 20px;
+    }
+}
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:700px) {
@@ -448,7 +641,7 @@ header {
     .timeline-item.left{
         width: 100vw;
         left: 0;
-        transform: translateY(9rem);
+        transform: translateY(0);
     }
    
     
