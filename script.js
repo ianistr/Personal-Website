@@ -1,3 +1,26 @@
+const logo = document.querySelectorAll('.logo');
+
+        // Add an event listener to each object
+        logo.forEach(object => {
+            object.addEventListener('click', () => {
+                // Redirect to the specified URL
+                window.location.href = 'index.html';
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function changeClasses() {
     var oldElements = document.querySelectorAll('.timeline-item.right'); // Select all elements with old-class
     var newClassElement = document.querySelector('.timeline-item.left'); // Select an element with new-class
@@ -169,6 +192,14 @@ const objects = document.querySelectorAll('.link-container');
                 window.location.href = 'services.html';
             });
         });
+
+
+
+
+
+
+
+
 
 
 
