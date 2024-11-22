@@ -775,7 +775,11 @@ animation: pop 1.5s ease
     font-weight: bold;
 }
 
-
+#profilepic{
+    height: 35vw;
+    width: auto;
+    margin-left: 20px;
+}
 
 
 
