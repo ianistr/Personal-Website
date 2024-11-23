@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ianistr-Web Developer</title>
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <header>
+        <nav class="navbar-wrapper">
+            <div class="navbar">
+                <div class="logo">ianistr.</div>
+                <div class="nav-links">
+                    <a href="services.html">Services</a>
+                    <a href="work.html">Work</a>
+                    <a href="about.html">About</a>
+                    
+                
+                <button class="talk-button">Let's Talk</button>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </div>  
+        </nav>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+
+    </header>
+
+    <div class="container">
+        <header class="header-about">
+            <div class="header-content">
+
+                <!-- <h1 class="glowing-text">ianistr.</h1> Ask opinion on this!--> 
+
+                
+                <p class="subtitle">Full Stack Developer</p>
+                <div class="typing-text">Building modern web experiences</div>
+            </div>
+        </header>
+
+        <section id="about" class="about fade-in">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p class="about-text">Passionate web developer with expertise in modern web technologies and a keen eye for creating seamless user experiences. Committed to writing clean, maintainable code and staying current with industry best practices.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="tech-stack fade-in">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                    <div class="progress-bar" data-percent="90"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                    <div class="progress-bar" data-percent="85"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                    <div class="progress-bar" data-percent="80"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-aws"></i>
+                    <span>AWS</span>
+                    <div class="progress-bar" data-percent="75"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-docker"></i>
+                    <span>Docker</span>
+                    <div class="progress-bar" data-percent="85"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                    <div class="progress-bar" data-percent="95"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="expertise fade-in">
+            <h2 class="section-title">Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend </h3>
+                    <p>Modern UI/UX with React, Tailwind, and Next.js</p>
+                    <ul class="expertise-list">
+                        <li>Responsive Design</li>
+                        <li>State Management</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+                <div class="expertise-item">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <p>RESTful APIs, GraphQL, and Microservices</p>
+                    <ul class="expertise-list">
+                        <li>API Architecture</li>
+                        <li>Database Design</li>
+                        <li>Security Implementation</li>
+                    </ul>
+                </div>
+                <div class="expertise-item">
+                    <h3><i class="fas fa-cloud"></i> Cloud Services</h3>
+                    <p>AWS, Azure, and serverless architecture</p>
+                    <ul class="expertise-list">
+                        <li>Cloud Infrastructure</li>
+                        <li>Serverless Computing</li>
+                        <li>Scale Management</li>
+                    </ul>
+                </div>
+                <div class="expertise-item">
+                    <h3><i class="fas fa-code-branch"></i> DevOps</h3>
+                    <p>CI/CD, Docker, and Kubernetes</p>
+                    <ul class="expertise-list">
+                        <li>Automated Deployment</li>
+                        <li>Container Orchestration</li>
+                        <li>Infrastructure as Code</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact fade-in">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+    </div>
+    
+    <script src="about.js"></script>
+</body>
+</html>
