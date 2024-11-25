@@ -78,21 +78,21 @@ header {
 
 #menu{
     display: none;
-    width: 40vw;
-    height: 100vh;
+    width: 95%;
+    
     position: fixed;
     top: 5.5rem;
-    right: 0.7rem;
+    
     z-index: 6;
     background-color: #171615;
     align-items: left;
-    text-align: center;
-    justify-content: center;
+    text-align: left;
+    justify-content: left;
 }
 
 #menu ul{
     list-style-type: none;
-    text-align: center;
+    text-align: left;
     
     
     
@@ -101,9 +101,9 @@ header {
 #menu li{
     display: flex; /* Display list items in a row */
     margin: 0 10px; /* Adjust spacing between items */
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    text-align: left;
+    align-items: left;
+    justify-content: left;
 }
 #menu a{
             position: relative;
@@ -113,7 +113,7 @@ header {
             font-size: 2rem;
             font-weight: bold;
             margin-right: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
             cursor: pointer;
             color: inherit;
     
@@ -205,7 +205,7 @@ header {
     font-size: 3.5rem;
     margin-top: 0;
     font-family: MyCustomFont;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-shadow: 1px 1px 3px #3e3d3d;
     animation: pop 1.5s ease;
     
@@ -230,12 +230,11 @@ header {
 }
 
 .availability-button {
-    position: absolute;
+    
     color: #d6ba99;
     
     font-size:1.2rem;
-    top: 85vh;
-    left: 2vw;
+    
     background-color: #2b2b2b6c;
     border: 0.5px solid #ffffff80;
     border-radius: 3px;
@@ -243,6 +242,7 @@ header {
     cursor: pointer;
     z-index: 5;
     animation: pop 1.5s ease;
+    margin-bottom: 2rem;
 
 }
 

@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.1
     });
 
+    const buttons = document.querySelectorAll('.talk-button');
+
+    // Add an event listener to each button
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Redirect to the specified URL
+            window.location.href = 'contact.html';
+        });
+    });
+
     document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
     document.querySelectorAll('.progress-bar').forEach(bar => {

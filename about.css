@@ -94,8 +94,8 @@ header {
 
 #menu{
     display: none;
-    width: 40vw;
-    height: 100vh;
+    width: 95%;
+    
     position: fixed;
     top: 5.5rem;
     right: 0.7rem;
@@ -113,13 +113,14 @@ header {
     
     
     
+    
 }
 #menu li{
     display: flex; /* Display list items in a row */
     margin: 0 10px; /* Adjust spacing between items */
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    text-align: left;
+    align-items: left;
+    justify-content: left;
 }
 #menu a{
             position: relative;
@@ -129,7 +130,7 @@ header {
             font-size: 2rem;
             font-weight: bold;
             margin-right: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
             cursor: pointer;
             color: inherit;
     
