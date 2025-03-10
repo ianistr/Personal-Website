@@ -555,6 +555,7 @@ header {
 }
 .info img{
     margin-top: 0;
+    max-height: 170px;
 }
 
 footer {
