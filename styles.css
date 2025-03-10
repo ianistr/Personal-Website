@@ -193,6 +193,7 @@ header {
 .hero-image {
     margin-top: 6rem;
     width: 60vw;
+    max-width: 600px;
     height: auto;
     border-radius: 10%;
     
