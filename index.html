@@ -3,355 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="theme-color" content="#000000" />
-    <title>ianistr-Web Developer</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <title>ianistr | Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <meta name="theme-color" content="#000000"> <!-- Change the color to match your design -->
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section id="section1">
-    <header>
-        <nav class="navbar-wrapper">
-            <div class="navbar">
-                <div class="logo">ianistr.</div>
-                <div class="nav-links">
-                    <a href="services.html">Services</a>
-                    <a href="work.html">Work</a>
-                    <a href="about.html">About</a>
-                    
-                
-                <button class="talk-button">Let's Talk</button>
-            </div>
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        </div>  
-        </nav>
-        <div id="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-
-
-
-
-
-        
-
-
-    </header>
-    <se>
-        <img src="iconsitebuneditat.png" class="hero-image">
-        <div class="hero">
-            
-            <div class="hero-text">
-                <h1>Web Designer&<br>Developer</h1>
-                <p>Premium Web Design, Development, and Maintenance services that help your business stand out.</p>
-                <div class="buttons">
-                    <button class="availability-button" id="available-button" onclick="toggleAvailabilityMenu()">Available</button> 
-                </div>
-        
-                <div id="availability-menu">
-                    
-                    <ul id="monthsList">
-                        <!-- List items will be appended here by JavaScript -->
-                    </ul>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-
-        
-        <div class="service-container">
-            <div class="service">
-                <div>
-                    <h2>01</h2>
-                    <h1>WEB DESIGN</h1>
-                    <p>Visually stunning web designs that captivate your audience by blending your brand voice and customer needs</p>
-                </div>
-                
-                
-                <div class="link-container">
-                    <img src="arrow.svg">
-                    <p>ABOUT WEB DESIGN</p>
-                </div>
-            </div>
-            <div class="service">
-                <div>
-                    <h2>02</h2>
-                <h1>DEVELOPMENT</h1>
-                <p>Get custom web development solutions that are tailored to you and designed to deliver a flawless user experience.</p>
-                </div>
-                
-                
-                <div class="link-container">
-                    <img src="arrow.svg">
-                    <p>ABOUT WEB DEVELOPMENT</p>
-                </div>
-            </div>
-            <div class="service">
-                <div>
-                    <h2>03</h2>
-                <h1>MAINTENANCE</h1>
-                <p>Consistent maintenance and website management that adapts to change, tailored to the evolution of your needs.</p>
-
-                </div>
-                
-                <div class="link-container">
-                    <img src="arrow.svg">
-                    <p>ABOUT MAINTENANCE</p>
-                </div>
-            </div>
-        </div>
+    <div class="cursor-follower"></div>
     
-        <section id="section2">
-        <div class="marquee">
-            <div class="marquee-inner">
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>        
+    <header>
+        <div class="container">
+            <div class="logo">ianistr.</div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
             </div>
         </div>
-       
-        <div class="process">
-            <h2>THE PROCESS</h2>
-            <h1>Your Website<br>In 5 steps</h1>
-           
-        </div>
+    </header>
 
-        
-
-
-        
-        <div class="timeline">
-            <div class="circle">01</div>
-            <div class="timeline-item left">
-                <div class="content" id="first">
-                    
-                    <h3>DISCOVERY CALL</h3>
-                    <p>Before we start, we determine if and how I can help you. What are your requirements for your new website? Why do you need a new website? What goals do you have, and what problems can we solve with a new website?</p>
-                    <ul>
-                        <li>We get to know each other better</li>
-                        <li>Determine how I can best assist you</li>
-                        <li>Understand the goals you have for your website</li>
-                    </ul>
-                    <span class="duration">2 HOURS</span>
+    <main>
+        <section id="home" class="hero" data-speed="0.05">
+            <div class="container">
+                <h1 class="glitch" data-text="ianistr.">ianistr.</h1>
+                <h2>Web & Mobile Developer</h2>
+                <p>Crafting beautiful digital experiences</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View My Work</a>
+                    <a href="#contact" class="btn secondary">Get In Touch</a>
                 </div>
             </div>
-
-            <div class="circle">02</div>
-            <div class="timeline-item right">
-                <div class="content">
-                    
-                    <h3>CONCEPT & STRATEGY</h3>
-                    <p>Together, we develop a strategy that successfully combines your goals with the needs of your target audience. This provides us with a very good impression of the website and the user interface.</p>
-                    <ul>
-                        <li>UX Design</li>
-                        <li>Wireframes</li>
-                        <li>Interactive Prototype</li>
-                    </ul>
-                    <span class="duration">2 WEEKS</span>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
+        </section>
 
-
-            <div class="circle">03</div>
-            <div class="timeline-item left">
-                <div class="content">
-                    
-                    <h3>WEB DESIGN</h3>
-                    <p>Now comes the magic. Based on the previously developed concept, I create a high-end screen design perfectly tailored to your brand. A web design that sets you apart from your competition, fits your target audience ideally, and provides an excellent user experience.</p>
-                    <ul>
-                        <li>High-end web design tailored to your brand</li>
-                        <li>Interactive prototype of the design</li>
-                    </ul>
-                    <span class="duration">2 WEEKS</span>
+        <section id="about" class="about" data-speed="0.1">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hello! I'm <span class="highlight">ianistr</span>, a passionate web developer focused on creating elegant and functional websites. With a keen eye for design and attention to detail, I transform ideas into digital reality.</p>
+                        <p>I believe in clean code, smooth user experiences, and websites that not only look great but also perform exceptionally well. Every project is an opportunity to create something meaningful and impactful.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-text">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-text">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">30+</span>
+                                <span class="stat-text">Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img src="https://placehold.co/400x500/2a2a2a/b8860b" alt="ianistr">
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="circle">04</div>
-            <div class="timeline-item right">
-                <div class="content">
-                    
-                    <h3>DEVELOPMENT</h3>
-                    <p>In this step, we breathe life into your new high-end design. You will receive a custom-built website using a modular web design system and CMS integration. Animations will add the necessary flair to your site and set you apart from the boring competition.</p>
-                    <ul>
-                        <li>Custom back-end</li>
-                        <li>Modular web design systems</li>
-                        <li>CMS integration</li>
-                    </ul>
-                    <span class="duration">2 WEEKS</span>
+        <section id="skills" class="skills" data-speed="0.07">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                                <h4>HTML5</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                                <h4>CSS3</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                                <h4>JavaScript</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Design</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                                <h4>UI/UX</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-pencil-ruler"></i></div>
+                                <h4>Responsive Design</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-swatchbook"></i></div>
+                                <h4>Color Theory</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-
-            <div class="circle">05</div>
-            <div class="timeline-item left">
-                <div class="content">
-                    
-                    <h3>WEBSITE ONBOARDING</h3>
-                    <p>In a personal video workshop, I will show you how to make changes to your new website quickly and easily. Additionally, you will receive a personalized domain that you can access at any time. Edit your personal website with the assistance of a Proffesional programmer. It's as simple as that.</p>
-                    <ul>
-                        <li>Personal feedback</li>
-                        <li>Personalized domain</li>
-                        <li>Edit text and images on your website</li>
-                    </ul>
-                    <span class="duration">2 HOURS</span>
+        <section id="projects" class="projects" data-speed="0.1">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="websites">Websites</button>
+                    <button class="filter-btn" data-filter="apps">Web Apps</button>
+                    <button class="filter-btn" data-filter="design">UI Design</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="websites">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2a2a2a/b8860b" alt="Project 1">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Luxury Brand Website</h3>
+                            <p>A premium website with elegant animations and responsive design.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="apps">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2a2a2a/b8860b" alt="Project 2">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Task Management App</h3>
+                            <p>Interactive task manager with drag-and-drop functionality.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="design">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2a2a2a/b8860b" alt="Project 3">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio UI Design</h3>
+                            <p>Modern UI design for creative professionals.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="websites">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2a2a2a/b8860b" alt="Project 4">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Restaurant Website</h3>
+                            <p>Elegant website for a high-end restaurant with online booking.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-    </section>
-    <section id="section3">
-        <div class="marquee">
-            <div class="marquee-inner">
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>        
-            </div>
-        </div>
-        <div class='info'>
-            <h2><span id="firstname">Ianis</span> Tr.</h2>
-            <img src="eu5.jpg" id="profilepic">
-            
-            <h1>A website that leaves a lasting impression</h1>
-            <p>Hi, I'm ianistr. - a freelancer specializing in premium web design, development, and maintenance services. Let's work together to bring your vision to life!</p>
+        </section>
 
-        </div>
-    </section>
+        <section id="contact" class="contact" data-speed="0.05">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Let's Talk</h3>
+                        <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Email</h4>
+                                    <p>contact@ianistr.dev</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Location</h4>
+                                    <p>San Francisco, CA</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Phone</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" required>
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <button type="submit" class="btn primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <div class="marquee">
-            <div class="marquee-inner">
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>  
-              <p>LET'S TALK ++ </p>        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">ianistr</div>
+                <div class="footer-text">Crafting digital experiences with passion and precision.</div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="footer-container">
-            <!-- About Section -->
-            <div class="footer-section">
-                <h2>PROJECT IN MIND?</h2>
-                <h1>Let's make your website shine</h1>
-                <p>Premium web design, development, and maintenance services to help your business stand out.</p>
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year"></span> ianistr. All rights reserved.</p>
             </div>
-            <!-- Quick Links Section -->
-            <div class="footer-section footer-links">
-                <h2>Quick Links</h2>
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="work.html">Work</a>
-                <a href="about.html">About</a>
-                <a href="privacy.html">Privacy Policy</a>
-            </div>
-            <!-- Social Media Section -->
-            <div class="footer-section social-icons">
-                <h2>Follow Me</h2>
-                <a href="https://www.instagram.com/ianisstr/" class="image-link" target="_blank">
-                <img src="instagram.png" alt="Clickable Photo">
-                     
-                    
-                </a>
-                
-            </div>
-            <!-- Contact Section -->
-            <div class="footer-section">
-                <h2>Contact Me</h2>
-                <p>Email: ianis_tararache@yahoo.com</p>
-                <p>Phone: +40726307501</p>
-                
-            </div>
-        </div>
-        <!-- Footer Bottom Section -->
-        <div class="footer-bottom">
-            <p>&copy; <span id="copyright-year"></span> ianistr. All rights reserved.</p>
-            
         </div>
     </footer>
-    
 
-
-
-
-
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3>Cookie Preferences</h3>
+                <p>This website uses cookies to enhance your browsing experience and analyze site traffic.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn accept">Accept All</button>
+                <button class="cookie-btn customize">Customize</button>
+                <button class="cookie-btn reject">Reject All</button>
+            </div>
+        </div>
+        <div class="cookie-settings">
+            <div class="cookie-option">
+                <label class="toggle">
+                    <input type="checkbox" checked disabled>
+                    <span class="toggle-slider"></span>
+                </label>
+                <div class="cookie-option-text">
+                    <h4>Essential Cookies</h4>
+                    <p>Required for the website to function properly.</p>
+                </div>
+            </div>
+            <div class="cookie-option">
+                <label class="toggle">
+                    <input type="checkbox" id="analytics-cookies" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+                <div class="cookie-option-text">
+                    <h4>Analytics Cookies</h4>
+                    <p>Help us improve our website by collecting anonymous usage data.</p>
+                </div>
+            </div>
+            <div class="cookie-option">
+                <label class="toggle">
+                    <input type="checkbox" id="marketing-cookies" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+                <div class="cookie-option-text">
+                    <h4>Marketing Cookies</h4>
+                    <p>Allow us to provide personalized content and offers.</p>
+                </div>
+            </div>
+            <div class="cookie-settings-buttons">
+                <button class="cookie-btn save">Save Preferences</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
-    </main>
 </body>
-</html>
-
-
-
-
+</html> 
