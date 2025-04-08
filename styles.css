@@ -291,6 +291,16 @@ nav ul li a.active:after {
     text-align: center;
     padding-top: 80px;
     background-image: radial-gradient(circle at center, #1e1e1e 0%, var(--bg-darker) 100%);
+    overflow: hidden;
+}
+
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .hero::before {
@@ -300,13 +310,13 @@ nav ul li a.active:after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(18, 18, 18, 0.95) 100%);
-    z-index: 1;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(18, 18, 18, 0.85) 100%);
+    z-index: 2;
 }
 
 .hero .container {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero h1 {
@@ -318,10 +328,14 @@ nav ul li a.active:after {
     position: relative;
     display: inline-block;
     transition: transform 0.3s ease, text-shadow 0.3s ease;
+    perspective: 500px;
+    transform-style: preserve-3d;
 }
 
 .hero h1:hover {
     text-shadow: 0 0 15px rgba(184, 134, 11, 0.4);
+    transform: rotateX(10deg) rotateY(10deg);
+    cursor: pointer;
 }
 
 .hero h2 {
@@ -351,7 +365,7 @@ nav ul li a.active:after {
 
 /* Let's Talk Tag */
 .lets-talk-tag {
-    margin-left: 2.5px;
+    margin-left: 15px;
     position: absolute;
     top: -85px;
     left: 50%;
@@ -1455,5 +1469,160 @@ input:checked + .toggle-slider:before {
     
     .cookie-option-text p {
         font-size: 0.8rem;
+    }
+}
+
+/* Role Text Animation */
+.role-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    height: 30px;
+}
+
+.role-container p {
+    margin: 0;
+    padding: 0;
+}
+
+.role-wrapper {
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+.role-text {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--gold);
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.role-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tech Icons */
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.tech-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(184, 134, 11, 0.1);
+    color: var(--gold);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    animation: fadeInUp 1s both, float 3s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i, 0)), calc(0.5s * var(--i, 0));
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tech-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: rgba(184, 134, 11, 0.2);
+    color: var(--gold-lighter);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.tech-icon:nth-child(1) { --i: 1; }
+.tech-icon:nth-child(2) { --i: 2; }
+.tech-icon:nth-child(3) { --i: 3; }
+.tech-icon:nth-child(4) { --i: 4; }
+.tech-icon:nth-child(5) { --i: 5; }
+
+/* Tertiary Button */
+.btn.tertiary {
+    background-color: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 12px 25px;
+    overflow: hidden;
+}
+
+.btn.tertiary:hover {
+    background-color: rgba(184, 134, 11, 0.1);
+    color: var(--gold-lighter);
+    border-color: var(--gold-lighter);
+}
+
+.btn.tertiary i {
+    margin-right: 5px;
+}
+
+/* Sparkle Effect */
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(184, 134, 11, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    animation: sparkleAnimation 1s forwards ease-out;
+    mix-blend-mode: screen;
+    box-shadow: 0 0 10px 2px rgba(184, 134, 11, 0.7);
+}
+
+.sparkle::before, .sparkle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(184, 134, 11, 0.3);
+    transform-origin: center;
+}
+
+.sparkle::before {
+    transform: rotate(45deg);
+}
+
+.sparkle::after {
+    transform: rotate(90deg);
+}
+
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
     }
 } 

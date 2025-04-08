@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateActiveNav);
     
     // Typing effect for the hero section
-    const heroText = document.querySelector('.hero p');
+    const heroText = document.querySelector('.hero .role-container p');
     
     if (heroText) {
         const text = heroText.textContent;
@@ -337,12 +337,201 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 1000);
     }
     
+    // Role text rotation effect
+    const roleTexts = document.querySelectorAll('.role-text');
+    let currentRoleIndex = 0;
+    
+    if (roleTexts.length > 0) {
+        roleTexts[0].classList.add('active');
+        
+        setInterval(() => {
+            roleTexts[currentRoleIndex].classList.remove('active');
+            currentRoleIndex = (currentRoleIndex + 1) % roleTexts.length;
+            roleTexts[currentRoleIndex].classList.add('active');
+        }, 3000);
+    }
+    
+    // Initialize particles.js if the element exists
+    if (document.getElementById('particles-js')) {
+        // Add particles.js script if not already added
+        if (!document.querySelector('script[src*="particles.js"]')) {
+            const particlesScript = document.createElement('script');
+            particlesScript.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+            particlesScript.onload = initializeParticles;
+            document.head.appendChild(particlesScript);
+        } else {
+            initializeParticles();
+        }
+    }
+    
     // Check cookie consent
     checkCookieConsent();
     
     // Add CSS class for animations
     document.body.classList.add('loaded');
+
+    // 3D Tilt effect for hero title
+    const heroTitle = document.querySelector('.hero h1');
+    
+    if (heroTitle) {
+        heroTitle.addEventListener('mousemove', (e) => {
+            const rect = heroTitle.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+            
+            // Calculate rotation based on mouse position
+            const rotateY = ((mouseX / rect.width) - 0.5) * 20;
+            const rotateX = ((mouseY / rect.height) - 0.5) * -20;
+            
+            // Apply the rotation
+            heroTitle.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+        });
+        
+        heroTitle.addEventListener('mouseleave', () => {
+            // Reset the rotation when mouse leaves
+            heroTitle.style.transform = 'rotateY(0deg) rotateX(0deg)';
+        });
+        
+        // Add click effect
+        heroTitle.addEventListener('click', () => {
+            heroTitle.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                heroTitle.style.transform = 'rotateY(0deg) rotateX(0deg)';
+            }, 150);
+        });
+    }
+
+    // Sparkle mouse trail effect for hero section
+    const heroSection = document.querySelector('.hero');
+    
+    if (heroSection) {
+        heroSection.addEventListener('mousemove', (e) => {
+            // Create a new sparkle element
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            
+            // Set the sparkle position to mouse position
+            sparkle.style.left = e.pageX + 'px';
+            sparkle.style.top = e.pageY + 'px';
+            
+            // Add the sparkle to the body
+            document.body.appendChild(sparkle);
+            
+            // Remove the sparkle after animation completes
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        });
+    }
 });
+
+function initializeParticles() {
+    particlesJS('particles-js', {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#b8860b"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#b8860b",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 2,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+}
 
 // Add reveal animation styles
 const style = document.createElement('style');
