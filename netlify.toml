@@ -13,7 +13,3 @@
   to = "/success.html"
   status = 200
 
-[[redirects]]
-  from = "/.netlify/functions/submit"
-  to = "/success.html"
-  status = 200 
