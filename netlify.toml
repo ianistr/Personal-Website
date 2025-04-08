@@ -1,0 +1,19 @@
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/submit"
+  to = "/success.html"
+  status = 200
+
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+
+[[redirects]]
+  from = "/.netlify/functions/submit"
+  to = "/success.html"
+  status = 200 

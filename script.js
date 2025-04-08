@@ -126,49 +126,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Contact form validation and animation
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simple validation
-            let isValid = true;
-            const formInputs = contactForm.querySelectorAll('input, textarea');
-            
-            formInputs.forEach(input => {
-                if (input.value.trim() === '') {
-                    isValid = false;
-                    input.classList.add('error');
-                } else {
-                    input.classList.remove('error');
-                }
-            });
-            
-            if (isValid) {
-                // Normally you would send the form data to a server here
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
-                
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-                
-                // Simulate sending (would be an actual API call in production)
-                setTimeout(() => {
-                    submitBtn.textContent = 'Message Sent!';
-                    submitBtn.classList.add('success');
-                    contactForm.reset();
-                    
-                    setTimeout(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.classList.remove('success');
-                    }, 3000);
-                }, 1500);
-            }
-        });
-    }
-    
     // Parallax effect for sections - disable on mobile
     const parallaxSections = document.querySelectorAll('.hero, .about, .skills, .projects, .contact');
     const isMobile = window.innerWidth <= 768;
