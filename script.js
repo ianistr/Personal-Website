@@ -405,23 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroSection = document.querySelector('.hero');
     
     if (heroSection) {
-        heroSection.addEventListener('mousemove', (e) => {
-            // Create a new sparkle element
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            
-            // Set the sparkle position to mouse position
-            sparkle.style.left = e.pageX + 'px';
-            sparkle.style.top = e.pageY + 'px';
-            
-            // Add the sparkle to the body
-            document.body.appendChild(sparkle);
-            
-            // Remove the sparkle after animation completes
-            setTimeout(() => {
-                sparkle.remove();
-            }, 1000);
-        });
+        // Remove the event listener code for the sparkle mouse trail effect
     }
 });
 

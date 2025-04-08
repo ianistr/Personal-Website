@@ -365,7 +365,7 @@ nav ul li a.active:after {
 
 /* Let's Talk Tag */
 .lets-talk-tag {
-    margin-left: 15px;
+    margin-left: 2.5px;
     position: absolute;
     top: -85px;
     left: 50%;
